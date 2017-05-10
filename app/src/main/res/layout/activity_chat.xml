@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/icon_back"
+                android:drawableStart="@mipmap/icon_back"
+                android:textColor="#2c72e6" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLength="10"
+                android:text="@string/title"
+                android:textColor="#111111"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/icon_add"
+                android:drawableStart="@mipmap/icon_add"
+                android:textColor="#2c72e6" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/ListView_body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@mipmap/skin_chat_background"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/skin_chat_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/EditText_input_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_edittext_chat"
+                    android:inputType="text"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:singleLine="true" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shape_button_send"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/send"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="visible">
+
+                <RadioButton
+                    style="@style/radioButton"
+                    android:layout_weight="1"
+                    android:button="@drawable/selector_voice" />
+
+                <RadioButton
+                    style="@style/radioButton"
+                    android:layout_weight="1"
+                    android:button="@drawable/selector_face" />
+
+                <RadioButton
+                    style="@style/radioButton"
+                    android:layout_weight="1"
+                    android:button="@drawable/selector_image" />
+
+                <RadioButton
+                    style="@style/radioButton"
+                    android:layout_weight="1"
+                    android:button="@drawable/selector_camera" />
+
+                <RadioButton
+                    style="@style/radioButton"
+                    android:layout_weight="1"
+                    android:button="@drawable/selector_video" />
+
+                <RadioButton
+                    style="@style/radioButton"
+                    android:layout_weight="1"
+                    android:button="@drawable/selector_more" />
+            </RadioGroup>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/ViewPager_chat"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#fff"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
